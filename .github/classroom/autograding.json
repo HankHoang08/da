@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "perl tests",
+      "setup": "",
+      "run": "cd tests & ./run_tests.sh",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
