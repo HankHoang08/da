@@ -37,3 +37,4 @@ echo
 mean_of_time="$(cut -d',' -f2 holes.csv | awk '{ total += $1 } END { print total/NR }')"
 echo " Average time exist of blackhole: $mean_of_time"
 echo
+sa
