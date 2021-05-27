@@ -15,4 +15,6 @@ report.md: holes.csv
 report.html: report.md
 	~/.local/bin/pandoc --from markdown --to html --output=report.html $^
 
+report:
+	
 
