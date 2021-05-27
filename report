@@ -1,0 +1,39 @@
+echo "# Black Holes Report"
+echo
+echo " ---
+ **Author: Hank Hoang**
+ **Date: 20 May 2021**
+ --- "
+echo
+
+
+num_observations="$(cat holes.csv | wc -l)"
+echo " Number of observations in dataset: $num_observations"
+echo
+echo "## Summary for the size column"
+#Summary for the first column
+min_of_size="$(cut -d',' -f1 holes.csv| sort -n | head -1)"
+echo " Minimum size of blackhole: $min_of_size"
+echo
+
+max_of_size="$(cut -d',' -f1 holes.csv| sort -n | tail -1)"
+echo " Maximum size of blackhole: $max_of_size"
+echo
+
+mean_of_size="$(cut -d',' -f1 holes.csv | awk '{ total += $1 } END { print total/NR }')"
+echo " Average size of blackhole: $mean_of_size"
+echo
+
+echo "## Summary for the time column" 
+#Summary for the second column
+min_of_time="$(cut -d',' -f2 holes.csv| sort -n | head -1)"
+echo " Minimum time exist of blackhole: $min_of_time"
+echo
+
+max_of_time="$(cut -d',' -f2 holes.csv| sort -n | tail -1)"
+echo " Maximum time exist of blackhole: $max_of_time"
+echo
+
+mean_of_time="$(cut -d',' -f2 holes.csv | awk '{ total += $1 } END { print total/NR }')"
+echo " Average time exist of blackhole: $mean_of_time"
+echo
